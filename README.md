@@ -97,7 +97,8 @@ The certificates in `tests/fixtures/tls` are throwaway and for the tests only; `
 
 ## Publishing
 
-Publishing to NuGet (with an API key from CI) is a later, deliberate step, so there is no publish workflow yet.
+Releases are on NuGet. The `publish` workflow is started by hand from the Actions tab and uses NuGet trusted
+publishing (an OIDC policy), so no API key is stored in the repository.
 When it comes: build in CI from a tag, publish with a scoped, expiring key, and check the package contents first
 (`dotnet pack` and look inside the `.nupkg`).
 
